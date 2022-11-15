@@ -12,33 +12,37 @@ function hello() {
 console.log('Test - should say "Hello World!"', hello());
 
 
-// 2. Function to return an personalized hello, using the `name` argument.
+// 2. Function to return a personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
+  return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-
+console.log(`Testing Greeting:`, helloName('Connor'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
+function addNumbers( firstNumber, secondNumber ) {
+  let total = firstNumber + secondNumber;
+  return total;
 }
-
+console.log(addNumbers(5,6));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( num0, num1, num2 ){
+  let total = num0 * num1 * num2;
+  return total;
 }
-
+console.log(multiplyThree(3,3,3));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+  else {
+    return false;
+  }
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -50,15 +54,32 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  let lastNumber = array.slice(-1);
+  return lastNumber
 }
+let testArray = [1, 2, 3, 4, 9, 19];
+let testArrayTwo = [];
+console.log(getLast(testArray));
+console.log(getLast(testArrayTwo)); //can't get it to return `undefined`.
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
+  let num0 = value;
+  for( let i=0; i<array.length; i++){
+    if (value === num0){
+      return 'Found the Number!';
+    }
+    else if (value<num0 || value>num0){
+      return 'No match';
+    }
+  }
   
 }
+let anotherArray = [1, 2, 3, 4, 5, 6]
+console.log( find( 15, testArray ));
+console.log( find( 10, testArray ));
 
 // ----------------------
 // Stretch Goals
