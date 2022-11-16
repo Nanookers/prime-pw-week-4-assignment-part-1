@@ -66,20 +66,19 @@ console.log(getLast(testArrayTwo)); //can't get it to return `undefined`.
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  let num0 = value;
   for( let i=0; i<array.length; i++){
-    if (value === num0){
-      return 'Found the Number!';
+    if (value === 9){
+      return true;
     }
-    else if (value<num0 || value>num0){
-      return 'No match';
+    else {
+      return false ;
     }
   }
   
 }
 let anotherArray = [1, 2, 3, 4, 5, 6]
-console.log( find( 15, testArray ));
-console.log( find( 10, testArray ));
+console.log( find( 9, testArray ));
+console.log( find( 10, anotherArray ));
 
 // ----------------------
 // Stretch Goals
@@ -87,7 +86,12 @@ console.log( find( 10, testArray ));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if( string.includes(letter)){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
@@ -96,7 +100,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 function sumAll( ) {
   let sum = 0
   // TODO: loop to add items
-  return sum;
+  return sum; 
 }
 
 // 10. Function to return a new array of all positive (greater than zero)
