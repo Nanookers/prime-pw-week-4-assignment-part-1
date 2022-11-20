@@ -77,20 +77,17 @@ console.log(getLast(testArrayTwo)); //can't get it to return `undefined`.
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 console.log( `<_________7 starts Here_________>`);
-function find( value, array ){ //can I use a third parameter to find the value? a num0 perhp
-  for( let i=0; i<array.length; i++){
-    if (value === 9){ //rework this to find any number entered (value === num0)
-      return true;
-    }
-    else {
-      return false ;
-    }
+
+testArray.some(find); //couldn't figure out a way to make the element customizable. 
+function find(value) {
+  if(value === 19){
+    return true;
   }
-  
+  else if( value != 19){
+    return false;
+  }
 }
-let anotherArray = [1, 2, 3, 4, 5, 6]
-console.log( find( 9, testArray ));
-console.log( find( 10, anotherArray ));
+console.log(testArray.some(find));
 
 // ----------------------
 // Stretch Goals
@@ -121,7 +118,7 @@ function sumAll( array ) {
   console.log(sum);
   return sum; 
 }// TODO: loop to add items
-console.log(sumAll(anotherArray)); 
+console.log(sumAll(testArray)); 
 
 
 // 10. Function to return a new array of all positive (greater than zero)
