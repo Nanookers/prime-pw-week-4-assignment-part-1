@@ -78,7 +78,8 @@ console.log(getLast(testArrayTwo)); //can't get it to return `undefined`.
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 console.log( `<_________7 starts Here_________>`);
 
-testArray.some(find); //couldn't figure out a way to make the element customizable. 
+testArray.some(find); //struggled with this: couldn't figure out a way to make the element customizable. I wanted to insert
+// a way to customize the vale of 19 in the conditional, but I couldn't make it work without posting false for everything. 
 function find(value) {
   if(value === 19){
     return true;
@@ -110,6 +111,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 console.log( `<_________9 starts Here_________>`);
+// TODO: loop to add items
 function sumAll( array ) {
   let sum = 0
   for( let i = 0; i <array.length; i++){
@@ -117,7 +119,7 @@ function sumAll( array ) {
   }
   console.log(sum);
   return sum; 
-}// TODO: loop to add items
+}
 console.log(sumAll(testArray)); 
 
 
